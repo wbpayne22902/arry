@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <iostream>
 #include <array>
 
 using namespace std;
@@ -10,9 +10,9 @@ int main() {
 	q[2] = 66;
 	q[3] = 88;
 	for(int i: q) {
-		printf("%d.\t", i);
+		cout<<i<<"\t";	
 	}
-	printf("\n");
+	cout<<endl;
 	return 0;
 }
 
