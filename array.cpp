@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main() {
+int main(int ac, char *av[]) {
 	array<int, 4> q;
 	q[0] = 22;
 	q[1] = 44;
@@ -14,7 +14,7 @@ int main() {
 	}
 	cout<<endl;
 	cout<<"Array size = "<<q.size()<<endl;
-	cout<<"Exiting!..."<<endl;
+	cout<<av[0]<<"Exiting!..."<<endl;
 	return 0;
 }
 
