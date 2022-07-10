@@ -13,6 +13,7 @@ int main() {
 		cout<<i<<"\t";	
 	}
 	cout<<endl;
+	cout<<"Array size = "<<q.size()<<endl;
 	return 0;
 }
 
