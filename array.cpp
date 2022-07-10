@@ -14,6 +14,7 @@ int main() {
 	}
 	cout<<endl;
 	cout<<"Array size = "<<q.size()<<endl;
+	cout<<"Exiting..."<<endl;
 	return 0;
 }
 
