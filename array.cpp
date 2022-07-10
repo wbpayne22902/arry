@@ -1,3 +1,4 @@
+//This is a simple program demonstrating the C++11 array class.
 #include <iostream>
 #include <array>
 #ifdef UNIX
