@@ -1,5 +1,8 @@
 #include <iostream>
 #include <array>
+#ifdef UNIX
+#include <libgen.h>
+#endif
 
 using namespace std;
 
@@ -14,7 +17,15 @@ int main(int ac, char *av[]) {
 	}
 	cout<<endl;
 	cout<<"Array size = "<<q.size()<<endl;
-	cout<<av[0]<<"Exiting!..."<<endl;
+	cout<<
+	#ifdef UNIX
+	basename(
+	#endif
+	av[0]
+	#ifdef UNIX
+	)
+	#endif
+	<<" Exiting!..."<<endl;
 	return 0;
 }
 
