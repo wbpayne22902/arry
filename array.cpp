@@ -1,4 +1,5 @@
 //This is a simple program demonstrating the C++11 array class.
+//Works on macOS, Linux, and Windows.
 #include <iostream>
 #include <array>
 #if defined(__APPLE__) || defined(__linux__)
