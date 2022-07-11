@@ -1,5 +1,4 @@
 //This is a simple program demonstrating the C++11 array class.
-//Poopy Diaper!
 #include <iostream>
 #include <array>
 #ifdef UNIX
