@@ -1,7 +1,7 @@
 //This is a simple program demonstrating the C++11 array class.
 #include <iostream>
 #include <array>
-#ifdef UNIX
+#if defined(__APPLE__) || defined(__linux__)
 #include <libgen.h>
 #endif
 
@@ -19,11 +19,11 @@ int main(int ac, char *av[]) {
 	cout<<endl;
 	cout<<"Array size = "<<q.size()<<endl;
 	cout<<
-	#ifdef UNIX
+	#if defined(__APPLE__) || defined(__linux__)
 	basename(
 	#endif
 	av[0]
-	#ifdef UNIX
+	#if defined(__APPLE__) || defined(__linux__)
 	)
 	#endif
 	<<" Exiting!..."<<endl;
