@@ -15,10 +15,10 @@ int main(int ac, char *av[]) {
 	q[2] = 66;
 	q[3] = 88;
 	for(int i: q) {
-		cout<<i<<"\t";	
+		cout<<i<<"\t";
 	}
 	cout<<endl;
-	cout<<"Array size = "<<q.size()<<endl;
+	cout<<"Array size is "<<q.size()<<endl;
 	cout<<
 	#if defined(__APPLE__) || defined(__linux__)
 	basename(
