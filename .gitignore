@@ -2,4 +2,9 @@
 array
 array.dSYM/*
 *.s
+*.obj
+*.exe
+*.com
+*.url
+*.lnk
 
