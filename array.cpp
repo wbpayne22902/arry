@@ -1,6 +1,7 @@
 //This is a simple program demonstrating the C++11 array class.
 //Works on macOS, Linux, and Windows.
 #include <iostream>
+#include <cstdlib>
 #include <array>
 #if defined(__APPLE__) || defined(__linux__)
 #include <libgen.h>
@@ -28,6 +29,6 @@ int main(int ac, char *av[]) {
 	)
 	#endif
 	<<" Exiting!..."<<endl;
-	return 0;
+	return EXIT_SUCCESS;
 }
 
