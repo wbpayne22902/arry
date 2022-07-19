@@ -9,8 +9,13 @@
 
 using namespace std;
 
+char *myname(char *nav) {
+	#if defined(__APPLE__) || defined(__linux__)
+	return basename(nav);
+	#endif
+}
 int main(int ac, char *av[]) {
-	cout<<av[0]<<": Welcome..."<<endl;
+	cout<<myname(av[0])<<": Welcome..."<<endl;
 	array<int, 4> q;
 	q[0] = 22;
 	q[1] = 44;
@@ -21,15 +26,7 @@ int main(int ac, char *av[]) {
 	}
 	cout<<endl;
 	cout<<"Array size is "<<q.size()<<endl;
-	cout<<
-	#if defined(__APPLE__) || defined(__linux__)
-	basename(
-	#endif
-	av[0]
-	#if defined(__APPLE__) || defined(__linux__)
-	)
-	#endif
-	<<" Exiting!..."<<endl;
+	cout<<myname(av[0])<<" Exiting!..."<<endl;
 	return EXIT_SUCCESS;
 }
 
