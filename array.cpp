@@ -12,6 +12,8 @@ using namespace std;
 char *myname(char *nav) {
 	#if defined(__APPLE__) || defined(__linux__)
 	return basename(nav);
+	#else
+	return nav;
 	#endif
 }
 int main(int ac, char *av[]) {
