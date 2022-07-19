@@ -10,7 +10,7 @@
 using namespace std;
 
 int main(int ac, char *av[]) {
-	cout<<argv[0]<<": Welcome..."<<endl;
+	cout<<av[0]<<": Welcome..."<<endl;
 	array<int, 4> q;
 	q[0] = 22;
 	q[1] = 44;
