@@ -8,4 +8,5 @@ array.dSYM/*
 *.url
 *.lnk
 *.i
+*.o
 

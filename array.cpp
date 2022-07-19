@@ -8,13 +8,14 @@
 #endif
 
 using namespace std;
-
-char *myname(char *nav) {
-	#if defined(__APPLE__) || defined(__linux__)
-	return basename(nav);
-	#else
-	return nav;
-	#endif
+extern "C" {
+	char *myname(char *nav) {
+		#if defined(__APPLE__) || defined(__linux__)
+		return basename(nav);
+		#else
+		return nav;
+		#endif
+	}
 }
 int main(int ac, char *av[]) {
 	cout<<myname(av[0])<<": Welcome..."<<endl;
