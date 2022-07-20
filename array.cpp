@@ -3,14 +3,14 @@
 #include <iostream>
 #include <cstdlib>
 #include <array>
-#if defined(__APPLE__) || defined(__linux__)
+#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__)
 #include <libgen.h>
 #endif
 
 using namespace std;
 extern "C" {
 	char *myname(char *nav) {
-		#if defined(__APPLE__) || defined(__linux__)
+		#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__)
 		return basename(nav);
 		#else
 		return nav;
