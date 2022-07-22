@@ -6,7 +6,7 @@
 #if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__)
 #include <libgen.h>
 #endif
-
+const double version = 1.2;
 using namespace std;
 extern "C" {
 	char *myname(char *nav) {
@@ -18,7 +18,7 @@ extern "C" {
 	}
 }
 int main(int ac, char *av[]) {
-	cout<<myname(av[0])<<": Welcome..."<<endl;
+	cout<<myname(av[0])<<": Welcome to version "<<version<<"..."<<endl;
 	array<int, 4> q;
 	q[0] = 22;
 	q[1] = 44;
