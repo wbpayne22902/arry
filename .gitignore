@@ -9,4 +9,7 @@ array.dSYM/*
 *.lnk
 *.i
 *.o
+*.html
+*.htm
+*.txt
 
