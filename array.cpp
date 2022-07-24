@@ -29,7 +29,7 @@ int main(int ac, char *av[]) {
 	}
 	cout<<endl;
 	cout<<"Array size is "<<q.size()<<endl;
-	cout<<myname(av[0])<<" Exiting!..."<<endl;
+	cout<<myname(av[0])<<" Exiting successfully!..."<<endl;
 	return EXIT_SUCCESS;
 }
 
