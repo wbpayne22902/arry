@@ -6,7 +6,7 @@
 #if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__)
 #include <libgen.h>
 #endif
-const double version = 1.2;
+const double version = 1.3;
 using namespace std;
 extern "C" {
 	char *myname(char *nav) {
