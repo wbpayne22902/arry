@@ -13,3 +13,6 @@ array.dSYM/*
 *.htm
 *.txt
 
+array.ilk
+array.pdb
+vc140.pdb
