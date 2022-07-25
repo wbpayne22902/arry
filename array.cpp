@@ -7,7 +7,7 @@
 #if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__)
 #include <libgen.h>
 #endif
-const double version = 1.3;
+const double version = 1.4;
 using namespace std;
 extern "C" {
 	char *myname(char *nav) {
@@ -30,6 +30,7 @@ int main(int ac, char *av[]) {
 	}
 	cout<<endl;
 	cout<<"Array size is "<<q.size()<<endl;
+	cout<<"sizeof(q) = "<<sizeof(q)<<endl;
 	cout<<myname(av[0])<<" Exiting successfully!..."<<endl;
 	return EXIT_SUCCESS;
 }
