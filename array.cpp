@@ -1,5 +1,6 @@
 //This is a simple program demonstrating the C++11 array class.
 //Works on macOS, Linux, and Windows, and FreeBSD.
+//Copyright 2022 Wilhelm Payne
 #include <iostream>
 #include <cstdlib>
 #include <array>
