@@ -6,4 +6,18 @@ This will run on Windows, macOS, FreeBSD, and Linux.
 
 ## macOS Compilation
     clang++ -std=c++11 -o array array.cpp
+## Linux Compilation
+    g++ -std=c++11 -o array array.cpp
+
+## Windows Compilation
+    cl /EHsc /std:c++latest /link /out:array.exe array.cpp
+
+## Run
+    ./array
+    or
+    ./array.exe
+
+## License
+BSD 3-Clause License
+
 
