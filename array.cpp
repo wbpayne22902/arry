@@ -21,7 +21,7 @@ extern "C" {
 }
 int main(int ac, char *av[]) {
 	cout<<myname(av[0])<<": Welcome to version "<<version<<"..."<<endl;
-#if defined(__APPLE) || defined(__linux__) || defined(__FreeBSD__)
+#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__)
 	struct utsname un;
 	uname(&un);
 	printf("Running on %s ver %s on a(n) %s.\n", un.sysname, un.release, un.machine);
