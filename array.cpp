@@ -5,8 +5,8 @@
 #include <cstdlib>
 #include <array>
 #if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__)
-#include <libgen.h>
-#include <sys/utsname.h>
+	#include <libgen.h>
+	#include <sys/utsname.h>
 #endif
 const double version = 1.4;
 using namespace std;
