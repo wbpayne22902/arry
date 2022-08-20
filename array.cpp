@@ -8,7 +8,7 @@
 	#include <libgen.h>
 	#include <sys/utsname.h>
 #endif
-const double version = 1.4;
+const double version = 1.6;
 using namespace std;
 extern "C" {
 	char *myname(char *nav) {
