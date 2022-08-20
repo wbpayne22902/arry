@@ -16,3 +16,4 @@ array.dSYM/*
 array.ilk
 array.pdb
 vc140.pdb
+build/Debug/outDebug
