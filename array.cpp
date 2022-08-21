@@ -15,6 +15,7 @@ extern "C" {
 		#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__)
 		return basename(nav);
 		#else
+		//these are not run on a UNIX based system.
 		return nav;
 		#endif
 	}
