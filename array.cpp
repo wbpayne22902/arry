@@ -39,6 +39,7 @@ int main(int ac, char *av[]) {
 	cout<<"Array size is "<<q.size()<<endl;
 	cout<<"sizeof(q) = "<<sizeof(q)<<endl;
 	cout<<myname(av[0])<<" Exiting successfully!..."<<endl;
+	cout<<un.version<<endl;
 	return EXIT_SUCCESS;
 }
 
