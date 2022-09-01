@@ -26,6 +26,7 @@ int main(int ac, char *av[]) {
 	struct utsname un;
 	uname(&un);
 	printf("Running on %s ver %s on a(n) %s.\n", un.sysname, un.release, un.machine);
+	cout<<un.version<<endl;
 #endif
 	array<int, 4> q;
 	q[0] = 22;
@@ -39,7 +40,6 @@ int main(int ac, char *av[]) {
 	cout<<"Array size is "<<q.size()<<endl;
 	cout<<"sizeof(q) = "<<sizeof(q)<<endl;
 	cout<<myname(av[0])<<" Exiting successfully!..."<<endl;
-	cout<<un.version<<endl;
 	return EXIT_SUCCESS;
 }
 
