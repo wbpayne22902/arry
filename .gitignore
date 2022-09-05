@@ -15,3 +15,5 @@ array.ilk
 array.pdb
 vc140.pdb
 build/Debug/outDebug
+array.js
+array.wasm
