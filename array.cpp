@@ -8,7 +8,7 @@
 	#include <libgen.h>
 	#include <sys/utsname.h>
 #endif
-const double version = 1.8;
+const double version = 1.9;
 using namespace std;
 extern "C" {
 	char *myname(char *nav) {
@@ -27,7 +27,6 @@ int main(int ac, char *av[]) {
 	struct utsname un;
 	uname(&un);
 	printf("Running on %s ver %s on a(n) %s.\n", un.sysname, un.release, un.machine);
-	cout<<un.version<<endl;
 #endif
 	array<int, 4> q;
 	q[0] = 22;
