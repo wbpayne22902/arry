@@ -8,7 +8,7 @@
 	#include <libgen.h>
 	#include <sys/utsname.h>
 #endif
-const double version = 1.91;
+const double version = 2.00;
 using namespace std;
 extern "C" {
 	char *myname(char *nav) {
@@ -43,8 +43,10 @@ int main(int ac, char *av[]) {
 	for(string i: stra) {
 		cout<<i<<endl;
 	}
-	cout<<"Array size is "<<q.size()<<endl;
+	cout<<"Array q size is "<<q.size()<<endl;
 	cout<<"sizeof(q) = "<<sizeof(q)<<endl;
+	cout<<"Array stra size is "<<stra.size()<<endl;
+	cout<<"sizeof(stra) = "<<sizeof(stra)<<endl;
 	cout<<myname(av[0])<<" Exiting successfully!..."<<endl;
 	return EXIT_SUCCESS;
 }
