@@ -29,6 +29,9 @@ int main(int ac, char *av[]) {
 	printf("Running on %s ver %s on a(n) %s.\n", un.sysname, un.release, un.machine);
 #endif
 	array<int, 4> q;
+	array<string, 2> stra;
+	stra[0] = "Hello";
+	stra[1] = "World";
 	q[0] = 22;
 	q[1] = 44;
 	q[2] = 66;
@@ -37,6 +40,9 @@ int main(int ac, char *av[]) {
 		cout<<i<<"\t";
 	}
 	cout<<endl;
+	for(string i: stra) {
+		cout<<i<<endl;
+	}
 	cout<<"Array size is "<<q.size()<<endl;
 	cout<<"sizeof(q) = "<<sizeof(q)<<endl;
 	cout<<myname(av[0])<<" Exiting successfully!..."<<endl;
