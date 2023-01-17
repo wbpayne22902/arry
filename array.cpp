@@ -4,7 +4,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <array>
-#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__EMSCRIPTEN__)
+#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__EMSCRIPTEN__) || defined(__CYGWIN__)
 	#include <libgen.h>
 	#include <sys/utsname.h>
 #endif
@@ -12,7 +12,7 @@ const double version = 2.10;
 using namespace std;
 extern "C" {
 	char *myname(char *nav) {
-		#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__EMSCRIPTEN__)
+		#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__EMSCRIPTEN__) || defined(__CYGWIN__)
 			return basename(nav);
 		return basename(nav);
 		#else
@@ -23,7 +23,7 @@ extern "C" {
 }
 int main(int ac, char *av[]) {
 	cout<<myname(av[0])<<": Welcome to version "<<version<<"..."<<endl;
-#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__EMSCRIPTEN__)
+#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__EMSCRIPTEN__) || defined(__CYGWIN__)
 	struct utsname un;
 	uname(&un);
 	printf("Running on %s ver %s on a(n) %s.\n", un.sysname, un.release, un.machine);
