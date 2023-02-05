@@ -2,6 +2,7 @@
 //Works on macOS, Linux, and Windows, and FreeBSD.
 //Copyright 2022 Wilhelm Payne
 #include <iostream>
+#include <cstdio>
 #include <cstdlib>
 #include <array>
 #if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__EMSCRIPTEN__) || defined(__CYGWIN__)
@@ -17,7 +18,10 @@ extern "C" {
 		return basename(nav);
 		#else
 		//these are not run on a UNIX based system.
-		return nav;
+		static char fname[_MAX_FNAME];
+		static char fext[_MAX_EXT];
+		_splitpath(nav, NULL, NULL, fname, fext);
+		return fname;
 		#endif
 	}
 }
