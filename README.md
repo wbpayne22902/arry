@@ -6,21 +6,21 @@ This will run on Windows, macOS, FreeBSD, Linux, and Cygwin.
 
 ## macOS Compilation
 
-    clang++ -std=c++11 -o array array.cpp
+`clang++ -std=c++11 -o array array.cpp`
 
 ## Linux and Cygwin Compilation
 
-    g++ -std=c++11 -o array array.cpp
+`g++ -std=c++11 -o array array.cpp`
 
 ## Windows Compilation
 
-    cl /EHsc /std:c++latest /link /out:array.exe array.cpp
+`cl /EHsc /std:c++latest /link /out:array.exe array.cpp`
 
 ## Run
 
-    ./array
-    or
-    .\array.exe
+``./array``
+or
+``.\array.exe``
 
 ## License
 
