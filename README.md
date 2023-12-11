@@ -14,7 +14,7 @@ This will run on Windows, macOS, FreeBSD, Linux, and Cygwin.
 
 ## Windows Compilation
 
-`cl /EHsc /std:c++latest /link /out:array.exe array.cpp`
+`cl /EHsc /MD array.cpp`
 
 ## Run
 
