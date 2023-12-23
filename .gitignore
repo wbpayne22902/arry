@@ -5,6 +5,7 @@ array.dSYM/*
 *.obj
 *.exe
 *.com
+*.pif
 *.url
 *.lnk
 *.i
