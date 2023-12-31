@@ -11,19 +11,16 @@
 #endif
 const double version = 2.10;
 using namespace std;
-extern "C" {
-	char *myname(char *nav) {
-		#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__EMSCRIPTEN__) || defined(__CYGWIN__) || defined(__wasi__) || defined(__NetBSD__)
-			return basename(nav);
-		return basename(nav);
-		#else
-		//these are not run on a UNIX based system.
-		static char fname[_MAX_FNAME];
-		static char fext[_MAX_EXT];
-		_splitpath(nav, NULL, NULL, fname, fext);
-		return fname;
-		#endif
-	}
+char *myname(char *nav) {
+	#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__EMSCRIPTEN__) || defined(__CYGWIN__) || defined(__wasi__) || defined(__NetBSD__)
+	return basename(nav);
+	#else
+	//these are not run on a UNIX based system.
+	static char fname[_MAX_FNAME];
+	static char fext[_MAX_EXT];
+	_splitpath(nav, NULL, NULL, fname, fext);
+	return fname;
+	#endif
 }
 int main(int ac, char *av[]) {
 	cout<<myname(av[0])<<": Welcome to version "<<version<<"..."<<endl;
