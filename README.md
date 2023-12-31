@@ -24,4 +24,5 @@ or
 
 ## License
 
+Copyright 2022-2023 Wilhelm Payne
 BSD 3-Clause License
