@@ -29,6 +29,7 @@ int main(int ac, char *av[]) {
 	uname(&un);
 	printf("Running on %s ver %s on a(n) %s.\n", un.sysname, un.release, un.machine);
 #endif
+/* do stuff! */
 	array<int, 4> q;
 	array<string, 2> stra;
 	stra[0] = "Hello";
