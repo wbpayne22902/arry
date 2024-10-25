@@ -1,6 +1,6 @@
 //This is a simple program demonstrating the C++11 array class.
 //Works on macOS, Linux, and Windows, and FreeBSD.
-//Copyright 2022-2023 Wilhelm Payne
+//Copyright 2022-2024 Wilhelm Payne
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
@@ -9,7 +9,7 @@
 	#include <libgen.h>
 	#include <sys/utsname.h>
 #endif
-const double version = 2.11;
+const double version = 2.20;
 using namespace std;
 char *myname(char *nav) {
 	#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__EMSCRIPTEN__) || defined(__CYGWIN__) || defined(__wasi__) || defined(__NetBSD__)
