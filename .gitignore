@@ -12,6 +12,7 @@ array.dSYM/*
 *.o
 *.html
 *.htm
+*.pch
 array.ilk
 array.pdb
 vc140.pdb
