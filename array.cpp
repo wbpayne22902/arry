@@ -9,7 +9,7 @@
 	#include <libgen.h>
 	#include <sys/utsname.h>
 #endif
-const double version = 2.20;
+const double version = 2.21;
 using namespace std;
 char *myname(char *nav) {
 	#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__EMSCRIPTEN__) || defined(__CYGWIN__) || defined(__wasi__) || defined(__NetBSD__)
