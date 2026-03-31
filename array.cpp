@@ -27,8 +27,10 @@ int main(int ac, char *av[]) {
 	cout<<"Copyright 2026 Wilhelm Payne."<<endl;
 #if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__EMSCRIPTEN__) || defined(__CYGWIN__) || defined(__wasi__) || defined(__NetBSD__)
 	struct utsname un;
+	char nu[256];
 	uname(&un);
-	printf("Running on %s ver %s on a(n) %s.\n", un.sysname, un.release, un.machine);
+	snprintf(nu, 255, "Running on %s ver %s on a(n) %s.\n", un.sysname, un.release, un.machine);
+	cout<<nu;
 #endif
 	array<int, 4> q;
 	array<string, 2> stra;
