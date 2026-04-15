@@ -25,6 +25,7 @@ char *myname(char *nav) {
 int main(int ac, char *av[]) {
 	cout<<myname(av[0])<<": Welcome to version "<<version<<"..."<<endl;
 	cout<<"Copyright 2026 Wilhelm Payne."<<endl;
+	cout<<"King Jellyfish loves us!"<<endl;
 #if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__EMSCRIPTEN__) || defined(__CYGWIN__) || defined(__wasi__) || defined(__NetBSD__)
 	struct utsname un;
 	char nu[256];
