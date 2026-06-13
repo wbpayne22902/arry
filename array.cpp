@@ -52,7 +52,7 @@ int main(int ac, char *av[]) {
 	cout<<"sizeof(q) = "<<sizeof(q)<<endl;
 	cout<<"Array stra size is "<<stra.size()<<endl;
 	cout<<"sizeof(stra) = "<<sizeof(stra)<<endl;
-	cout<<myname(av[0])<<": Exiting successfully with exit code 0!..."<<endl;
+	cout<<myname(av[0])<<": Exiting successfully..."<<endl;
 	return EXIT_SUCCESS;
 }
 
