@@ -9,7 +9,7 @@
 	#include <libgen.h>
 	#include <sys/utsname.h>
 #endif
-const double version = 2.33;
+const double version = 2.34;
 using namespace std;
 char *myname(char *nav) {
 	#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__EMSCRIPTEN__) || defined(__CYGWIN__) || defined(__wasi__) || defined(__NetBSD__)
@@ -52,7 +52,7 @@ int main(int ac, char *av[]) {
 	cout<<"sizeof(q) = "<<sizeof(q)<<endl;
 	cout<<"Array stra size is "<<stra.size()<<endl;
 	cout<<"sizeof(stra) = "<<sizeof(stra)<<endl;
-	cout<<myname(av[0])<<": Exiting successfully..."<<endl;
+	cout<<myname(av[0])<<": Exiting successfully"<<endl;
 	return EXIT_SUCCESS;
 }
 
