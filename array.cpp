@@ -18,7 +18,7 @@ char *myname(char *nav) {
 	//these are not run on a UNIX based system.
 	static char fname[_MAX_FNAME];
 	static char fext[_MAX_EXT];
-	_splitpath(nav, NULL, NULL, fname, fext);
+	_splitpath_s(nav, NULL, 0, NULL, 0, fname, _MAX_FNAME, fext, _MAX_EXT);
 	return fname;
 	#endif
 }
@@ -55,4 +55,3 @@ int main(int ac, char *av[]) {
 	cout<<myname(av[0])<<": Exiting successfully"<<endl;
 	return EXIT_SUCCESS;
 }
-
