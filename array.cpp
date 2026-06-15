@@ -8,6 +8,9 @@
 #include <chrono>
 #include <ctime>
 #include <iomanip>
+#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__CYGWIN__) || defined(__NetBSD__) || defined(__unix__)
+	#include <curses.h>
+#endif
 #if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__EMSCRIPTEN__) || defined(__CYGWIN__) || defined(__wasi__) || defined(__NetBSD__)
 	#include <libgen.h>
 	#include <sys/utsname.h>
@@ -26,6 +29,12 @@ char *myname(char *nav) {
 	#endif
 }
 int main(int ac, char *av[]) {
+#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__CYGWIN__) || defined(__NetBSD__) || defined(__unix__)
+	initscr();
+	clear();
+	refresh();
+	endwin();
+#endif
 	cout<<myname(av[0])<<": Welcome to version "<<version<<"..."<<endl;
 	cout<<"Copyright 2024-2026 Wilhelm Payne."<<endl;
 	cout<<"King Jellyfish loves us and so does Queen!!"<<endl;
