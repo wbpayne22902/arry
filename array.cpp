@@ -8,15 +8,31 @@
 #include <chrono>
 #include <ctime>
 #include <iomanip>
-#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__CYGWIN__) || defined(__NetBSD__) || defined(__unix__)
-	#include <curses.h>
-#endif
 #if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__EMSCRIPTEN__) || defined(__CYGWIN__) || defined(__wasi__) || defined(__NetBSD__)
+	#include <curses.h>
 	#include <libgen.h>
+	#include <term.h>
+	#include <unistd.h>
 	#include <sys/utsname.h>
 #endif
 const double version = 2.35;
 using namespace std;
+
+static void clear_terminal() {
+#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__CYGWIN__) || defined(__NetBSD__) || defined(__unix__)
+	if(isatty(STDOUT_FILENO)) {
+		int err = 0;
+		if(setupterm(nullptr, STDOUT_FILENO, &err) == OK && err > 0) {
+			char *clear_command = tigetstr(const_cast<char *>("clear"));
+			if(clear_command != nullptr && clear_command != reinterpret_cast<char *>(-1)) {
+				putp(clear_command);
+				fflush(stdout);
+			}
+		}
+	}
+#endif
+}
+
 char *myname(char *nav) {
 	#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__EMSCRIPTEN__) || defined(__CYGWIN__) || defined(__wasi__) || defined(__NetBSD__)
 	return basename(nav);
@@ -29,12 +45,7 @@ char *myname(char *nav) {
 	#endif
 }
 int main(int ac, char *av[]) {
-#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__CYGWIN__) || defined(__NetBSD__) || defined(__unix__)
-	initscr();
-	clear();
-	refresh();
-	endwin();
-#endif
+	clear_terminal();
 	cout<<myname(av[0])<<": Welcome to version "<<version<<"..."<<endl;
 	cout<<"Copyright 2024-2026 Wilhelm Payne."<<endl;
 	cout<<"King Jellyfish loves us and so does Queen!!"<<endl;
