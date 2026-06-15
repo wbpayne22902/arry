@@ -6,11 +6,11 @@ This will run on Windows, macOS, FreeBSD, Linux, and Cygwin.
 
 ## macOS Compilation
 
-`clang++ -std=c++11 -o array array.cpp`
+`clang++ -std=c++11 -o array array.cpp -lncurses`
 
 ## Linux and Cygwin Compilation
 
-`g++ -std=c++11 -o array array.cpp`
+`g++ -std=c++11 -o array array.cpp -lncurses`
 
 ## Windows Compilation
 
