@@ -9,9 +9,11 @@
 #include <ctime>
 #include <iomanip>
 #if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__EMSCRIPTEN__) || defined(__CYGWIN__) || defined(__wasi__) || defined(__NetBSD__)
-	#include <curses.h>
+	#ifndef __EMSCRIPTEN__
+		#include <curses.h>
+		#include <term.h>
+	#endif
 	#include <libgen.h>
-	#include <term.h>
 	#include <unistd.h>
 	#include <sys/utsname.h>
 #endif
@@ -19,7 +21,7 @@ const double version = 2.35;
 using namespace std;
 
 static void clear_terminal() {
-#if defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__CYGWIN__) || defined(__NetBSD__) || defined(__unix__)
+#if (defined(__APPLE__) || defined(__linux__) || defined(__FreeBSD__) || defined(__CYGWIN__) || defined(__NetBSD__) || defined(__unix__)) && !defined(__EMSCRIPTEN__)
 	if(isatty(STDOUT_FILENO)) {
 		int err = 0;
 		if(setupterm(nullptr, STDOUT_FILENO, &err) == OK && err > 0) {
